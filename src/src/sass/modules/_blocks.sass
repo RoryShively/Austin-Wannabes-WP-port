@@ -1,0 +1,156 @@
+// CREW BLOCK SASS
+
+.main-gallery
+	margin-bottom: 40px
+
+.crew
+	background-color: ($splash4bgcolor - #111)
+	height: 400px
+	width: 250px
+	text-align: center
+	margin: 0 10px
+	font-size: 3em
+
+.splash4
+	.main-gallery
+		background-color: ($splash4bgcolor - #111)
+
+.crewPhoto
+	background-color: lavender
+	height: 100%
+
+.crewLabel
+	position: absolute
+	background-color: rgba(255,255,255, 0.3)
+	font-family: lato
+	bottom: 0
+	height: 40%
+	width: 100%
+	z-index: 10
+
+.crewName
+	font-size: .8em
+	font-weight: 600
+	border-bottom: rgba(0,0,0,0.6) 2px dotted
+
+.crewJob
+	font-size: .7em
+	font-style: italic
+
+.crewIMBD
+	position: absolute
+	background-color: rgba(255,255,255, 0.5)
+	font-family: serif
+	font-size: .4em
+	padding: 0 .4em
+	bottom: 0
+	right: 0
+	z-index: 20
+
+// ARTICLE BLOCK SASS
+
+.article
+	background-color: ($splash3bgcolor - #111)
+	height: 400px
+	width: 350px
+	text-align: center
+	margin: 0 10px
+	font-size: 3em
+
+.articleLabel
+	position: absolute
+	background-color: rgba(255,255,255, 0.6)
+	bottom: 0
+	height: 40%
+	width: 100%
+	font-family: lato
+	color: $lightblack
+	z-index: 10
+
+.articleTitle
+	line-height: 1em
+	position: absolute
+	display: inline-block
+	font-size: 0.55em
+	left: $artlabelpadding
+
+.articleDate
+	font-size: .4em
+	display: inline-block
+	line-height: 1em
+	position: absolute
+	top: $artlabelpadding
+	right: $artlabelpadding
+
+.articleDescription
+	font-size: .3em
+	padding: 2.5em 2em
+	text-align: left
+
+.articleBtn
+	position: absolute
+	right: $artlabelpadding
+	bottom: $artlabelpadding
+
+// MODAL BLOCK SASS
+
+.close
+	position: absolute
+
+.modal-content
+	background-color: ($modalbgcolor - $modalheadermod)
+	color: $lightblack
+
+.modal-body
+	background-color: $modalbgcolor
+	font-family: lato
+	text-indent: 24px
+
+.modal-title
+	padding-bottom: 0px
+	color: $lightblack
+
+.modalWrapper
+	text-align: center
+	height: 200px
+	overflow: hidden
+
+	img
+		width: 100%
+		margin-top: -30%
+
+.social-media
+	position: absolute
+	bottom: 0
+	padding-bottom: 5px
+	width: 100%
+
+	ul
+		width: 100%
+
+	li
+		display: inline-block
+		width: 25%
+		text-align: center
+
+
+// BUTTONS
+
+.btn, .close
+	background-color: transparent
+	border: 2px $lightblack solid
+	border-radius: 0px
+	transition: $transition
+	cursor: pointer
+
+	&:focus
+		outline: transparent
+
+	&:hover
+		color: $activecolor
+		border-color: $activecolor
+		transition: $transition
+
+.btn
+	font-weight: 600
+
