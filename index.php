@@ -136,7 +136,7 @@
 					<?php
 					  $today = date('Ymd');
 					  $myposts = get_posts(array(
-					    'post_type' => 'article',
+					    'post_type' => array('article', 'crew'),
 					    'posts_per_page'  => -1,
 
 					    'meta_key' => 'date',
@@ -174,10 +174,9 @@
 
 					?>
 
-
 					<div class="gallery-cell article">
 						<div class="articlePhoto">
-							<img src="img/rehersal.jpg">
+							
 						</div>
 						<div class="articleLabel">
 							<div class="articleTitle">
@@ -194,8 +193,7 @@
 							</button>
 						</div>
 					</div>
-					<div class="gallery-cell article">2</div>
-					<div class="gallery-cell article">3</div>
+
 				</div>
 			</section>
 			<section class="section splash4">
@@ -203,29 +201,51 @@
 					<h2>- Cast &amp; Crew -</h2>
 				</div>
 				<div class="main-gallery js-flickity" data-flickity-options='{ "wrapAround": true, "pageDots": true, "prevNextButtons": true }'>
-					<div class="gallery-cell crew">
-						<div class="crewPhoto">
-							<img src="img/angela-full.jpg">
+					
+					<?php
+					  $today = date('Ymd');
+					  $myposts = get_posts(array(
+					    'post_type' => array('article', 'crew'),
+					    'posts_per_page'  => -1,
+
+					    'meta_key' => 'date',
+					    'orderby' => 'meta_value_num',
+					    'order' => 'ASC',
+					  ));
+
+					  foreach ($myposts as $post) : setup_postdata($post);
+
+					  ?>
+
+						<div class="gallery-cell crew">
+							<div class="crewPhoto">
+								<img src="<?php the_field('picture'); ?>" />
+							</div>
+							<div class="crewLabel">
+								<div class="crewName">
+									<?php the_field('name'); ?>
+								</div>
+								<div class="crewJob">
+									<?php the_field('job'); ?>
+								</div>
+							</div>
+							<div class="crewIMBD">
+								IMBD &#9656;
+							</div>
 						</div>
-						<div class="crewLabel">
-							<div class="crewName">
-								Angela Marie
-							</div>
-							<div class="crewJob">
-								Producer
-							</div>
-							<div class="crewJob">
-								Actress
-							</div>
-						<div class="crewIMBD">
-							IMBD &#9656;
-						</div>
-					</div>
+
+					<?php
+					  endforeach;
+					  wp_reset_postdata();
+
+					?>
+
 				</div>
 			</section>
 
 			<section class="section splash5">
 				<div class="header">
+					<h2>- Gallery -</h2>
 				</div>
 			</section>
 
@@ -236,46 +256,36 @@
 		</div>
 
 
+		<?php
+		  $today = date('Ymd');
+		  $myposts = get_posts(array(
+		    'post_type' => array('article', 'crew'),
+		    'posts_per_page'  => -1,
+
+		    'meta_key' => 'date',
+		    'orderby' => 'meta_value_num',
+		    'order' => 'ASC',
+		  ));
+
+		  foreach ($myposts as $post) : setup_postdata($post);
+
+		  ?>
+
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Rehersals</h4>
+						<h4 class="modal-title" id="myModalLabel">
+							<?php the_field('title'); ?>
+						</h4>
 						<div class="modalWrapper">
-							<img src="img/rehersal.jpg">
+							<img src="<?php the_field('main_image'); ?>" />
 						</div>
 					</div>
 					<div class="modal-body">
 						<p>
-							div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi totam nam veniam possimus ea quibusdam accusamus voluptates, rerum quo nihil eveniet ad atque voluptate commodi repellendus ex harum molestiae fugiat.
-							</br>
-							div Numquam aperiam culpa perspiciatis animi assumenda voluptas, perferendis officiis iure, ad quaerat excepturi saepe praesentium vel, tenetur deserunt? Accusamus eligendi, fugiat expedita quis laudantium veritatis dolorum nostrum sit cum dolores.
-							</br>
-							div Qui sed, quibusdam consequatur rerum, debitis, magnam reiciendis sequi quaerat, aliquid praesentium ullam at quos commodi autem distinctio voluptatibus nostrum aspernatur totam dolore? Rem id, veritatis excepturi libero nihil fugiat.
-							</br>
-							div Impedit culpa veniam ab vel explicabo odit at, rem adipisci sapiente voluptates dolorum deserunt est corrupti nisi laudantium placeat magni doloribus quidem quasi delectus unde ex eos natus, amet. Architecto.
-							</br>
-							div Odit sint corporis quam sed eos aspernatur, et nam laborum molestias veniam! Minus, atque. Sapiente, placeat ab labore quidem vitae! Aliquid eius earum ad cupiditate nulla iusto sunt ipsa atque.
-							</br>
-							div A totam quia repellat voluptas velit quod similique rerum aliquid in, deleniti consequatur nihil eos temporibus nulla aperiam? Doloremque provident recusandae, accusamus quae quidem totam dolorem in ab eos consequuntur.
-							</br>
-							div Earum fugiat sed, ipsum sint error saepe nesciunt omnis minus deserunt mollitia, labore amet quo, delectus commodi necessitatibus iure sunt neque culpa doloremque perspiciatis soluta? Cumque reprehenderit ea ad, non.
-							</br>
-							div Maxime modi ipsam tenetur fugit commodi consequatur sunt nulla labore, repellendus laudantium autem facere consectetur blanditiis recusandae excepturi, ex in optio unde minima expedita asperiores sint obcaecati dignissimos fugiat. A.
-							</br>
-							div Explicabo assumenda consequuntur esse, quidem suscipit aspernatur ipsum harum. Dolores modi soluta optio eveniet maxime veniam reprehenderit, aut esse. Quibusdam sit rerum in eaque delectus, doloremque voluptatem consequatur sed incidunt?
-							</br>
-							div Debitis quaerat mollitia cupiditate pariatur ducimus non alias quam aliquid aspernatur, eaque distinctio, odio ea molestias culpa libero maxime itaque deleniti eos, quos beatae atque aperiam doloribus reprehenderit. Rem, consectetur!
-							</br>
-							div Fugit nulla repellendus deleniti iusto totam ut at, dolor esse minus expedita, reiciendis ullam facere quisquam odio dolores voluptates dolorem. Commodi quos obcaecati laborum ea, omnis esse quae pariatur, amet.
-							</br>
-							div Molestiae corporis ipsam, in ut harum vitae facilis voluptates eveniet, nam dignissimos reprehenderit praesentium repudiandae aliquam facere beatae incidunt sed itaque commodi voluptas animi perspiciatis placeat. Inventore iure ducimus, earum.
-							</br>
-							div Sapiente totam iure vel facere sunt libero voluptates, alias nihil tempora placeat, dolor vitae aut nobis magnam, quos illum ex saepe nesciunt, provident obcaecati ratione laudantium sint officiis vero. Ut.
-							</br>
-							div Consectetur necessitatibus at eligendi illo a obcaecati, vel porro sapiente iure. Voluptates doloremque, recusandae qui ipsa sapiente voluptatum harum deleniti voluptas vero excepturi. Omnis fuga reprehenderit, fugit aspernatur ea distinctio?
-							</br>
+							<?php the_field('article_content'); ?>
 						</p>
 					<div class="modal-footer">
 						<button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
@@ -283,6 +293,12 @@
 				</div>
 			</div>
 		</div>
+
+		<?php
+		  endforeach;
+		  wp_reset_postdata();
+
+		?>
 
 	</body>
 </html>
