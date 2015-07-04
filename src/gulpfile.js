@@ -73,8 +73,8 @@ gulp.task( 'sass', function () {
 // });
 
 gulp.task( 'watch', function () {
-	gulp.watch( srcdirs.js + '/client/*.js', ['scripts']);
-	gulp.watch( srcdirs.sass + '/*.sass', ['sass']);
+	gulp.watch( srcdirs.js + '/**/*.js', ['scripts']);
+	gulp.watch( srcdirs.sass + '/**/*.sass', ['sass']);
 	// gulp.watch( srcdirs.images + '/*.{png,jpg,gif}', ['optimize']);
 });
 

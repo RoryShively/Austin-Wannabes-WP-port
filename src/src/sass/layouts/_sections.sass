@@ -1,6 +1,25 @@
+.main
+	transition: 0.3s opacity
+	background-color: white
+	opacity: 0.9999
+
+.blackout-page
+	position: absolute
+	background-color: black
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+
+
 .splash1
 	background-size: cover
 	background-position: center
+	min-height: 578px
+	position: relative
+
+	@media only screen and (max-width: 600px)
+		min-height: 260px
 
 h2
 	font-size: 4em
@@ -9,7 +28,7 @@ h2
 	font-weight: 300
 
 	@media only screen and (max-width: 600px)
-		font-size: 2.5em
+		font-size: 2.1em
 		padding: 0.4em 0
 
 .header 
@@ -28,7 +47,7 @@ h2
 	@media only screen and (max-width: 1260px)
 		width: 60%
 
-	@media only screen and (max-width: 600px)
+	@media only screen and (max-width: 900px)
 		width: 100%
 
 .splash2
@@ -48,8 +67,9 @@ h2
 	width: 33%
 	float: right
 
-	@media only screen and (max-width: 600px)
+	@media only screen and (max-width: 900px)
 		width: 100%
+		clear: both
 		float: none
 
 iframe
@@ -61,6 +81,8 @@ iframe
 h4
 	text-align: center
 	font-size: 2em
+	font-family: lato
+	font-weight: 300
 	padding-bottom: 20px
 
 	@media only screen and (max-width: 600px)
@@ -70,7 +92,7 @@ h4
 p
 	font-family: lato
 	font-size: 1.3em
-	font-weight: 300
+	font-weight: 400
 
 	@media only screen and (max-width: 600px)
 		font-size: 1em
@@ -87,3 +109,50 @@ p
 	background-color: $splash5bgcolor
 	// color: white
 	position: relative
+	text-align: center
+
+	img
+		max-width: 98%
+		max-height: 400px
+		padding: 5px
+
+.article-page
+	text-align: center
+
+.article-head
+	background-color: rgba(112,235,227,0.9)
+	border-bottom: 8px solid rgba(255,255,255,0.5)
+	margin-bottom: 10px
+
+.article-content
+	display: inline-block
+	text-align: left
+	width: 50%
+	float: left
+	padding-left: 15px
+
+	p
+		padding-top: 15px
+		padding-bottom: 15px
+
+	img
+		display: block
+		margin: 0 auto
+
+.article-gallery
+	max-width: 40%
+	display: inline-block
+	float: right
+
+.gallery-row
+	margin: 0 auto
+
+.mashsb-container
+	background-color: white
+
+.article-gradient
+	@include gradient( rgba(255,255,255,0), white)
+	width: 50%
+	height: 80px
+	position: fixed
+	bottom: 0
