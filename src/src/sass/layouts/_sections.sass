@@ -119,6 +119,7 @@ p
 .article-page
 	text-align: center
 
+
 .article-head
 	background-color: rgba(112,235,227,0.9)
 	border-bottom: 8px solid rgba(255,255,255,0.5)
@@ -134,15 +135,39 @@ p
 	p
 		padding-top: 15px
 		padding-bottom: 15px
+		font-size: 1.35em
 
 	img
 		display: block
 		margin: 0 auto
+		max-width: 90%
+		max-height: 500px
+		height: auto
+		width: auto
 
 .article-gallery
-	max-width: 40%
-	display: inline-block
-	float: right
+	width: 50%
+	height: 98vh
+	right: 0
+	position: fixed
+
+	blockquote
+		p
+			font-size: 1.8em
+
+.article-gallery-cell
+	// width: 300px
+	// height: 300px
+	// background-color: red
+	max-width: 70%
+	margin: auto
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+
+	img
+		width: 100%
+		height: 100%
 
 .gallery-row
 	margin: 0 auto
@@ -156,3 +181,19 @@ p
 	height: 80px
 	position: fixed
 	bottom: 0
+
+.article-gradient-padding
+	width: 10px
+	height: 80px
+
+blockquote
+	font-weight: 300
+	font-style: italic
+	font-size: 2.2em
+	color: #ccc
+
+	p
+		font-weight: 300
+		font-style: italic
+		font-size: 3em
+		color: #ccc

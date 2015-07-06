@@ -37,7 +37,7 @@ gulp.task( 'scripts', function () {
 	// Minify and copy all JavaScript.
 	gulp.src( srcdirs.js + '/*.js' )
 		.pipe(concat('all.min.js'))
-		.pipe( uglify() )
+		// .pipe( uglify() )
 		.pipe( gulp.dest( buildDir.js ) )
 });
 

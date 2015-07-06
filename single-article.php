@@ -22,11 +22,7 @@
 	
 	<section class="article-page">
 
-		<div class="article-gallery">
-			
-		</div>
-
-		<div class="article-content">
+		<div class="article-content" id="article-content">
 			
 			<div class="article-head">
 				<h2><?php the_field('title'); ?></h2>
@@ -38,7 +34,17 @@
 			<?php endwhile; endif; ?>
 
 			<div class="article-gradient"></div>
+			<div class="article-gradient-padding"></div>
 		</div>
+
+		<div class="article-gallery">
+
+			<div class="article-gallery-cell" id="article-gallery-cell">
+				
+			</div>
+			
+		</div>
+
 	</section>
 
 	<?php wp_footer(); ?>
