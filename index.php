@@ -14,7 +14,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/all.min.js"></script>
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/index.min.js"></script>
 		<!-- script(src="assets/js/nav.js") -->
 		<!-- script(src="js/jquery.onepage-scroll.js") -->
 	</head>
@@ -144,7 +144,9 @@
 							</div>
 							<div class="articleLabel">
 								<div class="articleTitle"><?php the_field('title'); ?></div>
-								<div class="articleDate italic"><?php the_field('date'); ?></div>
+								<div class="articleDate italic">
+									<?php the_field('date'); ?>
+								</div>
 								<div class="articleDescription">
 									<?php the_field('summary'); ?>
 								</div>
@@ -157,15 +159,55 @@
 					<?php
 					  endforeach;
 					  wp_reset_postdata();
-
 					?>
-			
-
-
-					
 
 				</div>
 			</section>
+
+			<!-- SECTION 4 -->
+
+			<section class="section splash4" data-selector="splash4">
+				<div class="header">
+					<h2>- Cast &amp; Crew -</h2>
+				</div>
+				<div class="main-gallery js-flickity" data-flickity-options='{ "cellAllign": "center", "contain": true }'>
+
+					<?php
+					  $today = date('Ymd');
+					  $myposts = get_posts(array(
+					    'post_type' => 'crew',
+					    'posts_per_page'  => -1,
+
+					    
+					    'orderby' => 'meta_value_num',
+					    'order' => 'ASC',
+					  ));
+
+					  foreach ($myposts as $post) : setup_postdata($post);
+					?>
+
+						<div class="gallery-cell crew">
+							<div class="crewPhoto">
+								<img src="<?php the_field('picture'); ?>" />
+							</div>
+							<div class="crewLabel">
+								<div class="crewName">
+									<?php the_field('name'); ?>
+								</div>
+								<div class="crewJob">
+									<?php the_field('job'); ?>
+								</div>
+						</div>
+
+					<?php
+					  endforeach;
+					  wp_reset_postdata();
+					?>
+
+				</div>
+			</section>
+
+			<!-- SECTION 5 -->
 
 			<section class="section splash5" data-selector="splash5">
 				<div class="header">

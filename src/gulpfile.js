@@ -35,10 +35,15 @@ gulp.task( 'scripts', function () {
 	// 	.pipe( jshint.reporter( 'default' ) );
 
 	// Minify and copy all JavaScript.
-	gulp.src( srcdirs.js + '/*.js' )
-		.pipe(concat('all.min.js'))
+	gulp.src( srcdirs.js + '/index/*.js' )
+		.pipe(concat('index.min.js'))
 		// .pipe( uglify() )
-		.pipe( gulp.dest( buildDir.js ) )
+		.pipe( gulp.dest( buildDir.js ) );
+
+	gulp.src( srcdirs.js + '/articles/*.js' )
+		.pipe(concat('articles.min.js'))
+		// .pipe( uglify() )
+		.pipe( gulp.dest( buildDir.js ) );
 });
 
 // gulp.task('jade', function() {

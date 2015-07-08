@@ -14,37 +14,45 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/all.min.js"></script>
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/articles.min.js"></script>
 		<!-- script(src="assets/js/nav.js") -->
 		<!-- script(src="js/jquery.onepage-scroll.js") -->
 		<?php wp_head(); ?>
 	</head>
+	<body>
 	
-	<section class="article-page">
+		<section class="article-page">
 
-		<div class="article-content" id="article-content">
-			
-			<div class="article-head">
-				<h2><?php the_field('title'); ?></h2>
-				<?php echo do_shortcode('[mashshare shares="true" buttons="true" align="right" ]'); ?>
+			<div class="article-content" id="article-content">
+				
+				<div class="article-head">
+					<h2><?php the_field('title'); ?></h2>
+					<?php echo do_shortcode('[mashshare shares="true" buttons="true" align="right" ]'); ?>
+				</div>
+
+				<?php if (have_posts()) : while (have_posts()) : the_post();?>
+				<?php the_content(); ?>
+				<?php endwhile; endif; ?>
+
+				<div class="article-gradient"></div>
+				<div class="article-gradient-padding"></div>
 			</div>
 
-			<?php if (have_posts()) : while (have_posts()) : the_post();?>
-			<?php the_content(); ?>
-			<?php endwhile; endif; ?>
+			<div class="article-gallery">
 
-			<div class="article-gradient"></div>
-			<div class="article-gradient-padding"></div>
-		</div>
-
-		<div class="article-gallery">
-
-			<div class="article-gallery-cell" id="article-gallery-cell">
+				<div class="article-gallery-cell" id="article-gallery-cell">
+					
+				</div>
 				
 			</div>
-			
-		</div>
 
-	</section>
+			<div class="article-footer">
+				<div class="go-back">go back home</div>
+				<div class="go-top">top of page</div>
+			</div>
 
-	<?php wp_footer(); ?>
+		</section>
+
+		<?php wp_footer(); ?>
+
+	</body>
