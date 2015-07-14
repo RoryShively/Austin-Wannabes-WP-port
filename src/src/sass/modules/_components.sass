@@ -36,10 +36,15 @@
 	top: 0
 	z-index: 1000
 
-	a
+	.menu-item
 		border-bottom: 1px solid ($navbasecolor - $navsecondarymod)
 		padding: 1em
 		text-align: center
+		cursor: pointer
+
+	a
+		&:hover
+			background-color: transparent
 
 .cbp-spmenu-left
 	left: -240px

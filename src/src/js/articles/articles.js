@@ -90,7 +90,6 @@ $( document ).ready( function() {
 			return galleryIndex;
 		}
 
-		console.log(scrollAreaHeight);
 	}
 
 	var windowWidth = $( window ).width();
@@ -124,6 +123,12 @@ $( document ).ready( function() {
 		windowWidth = $( window ).width();
 		responsiveGallery();
 	});
+
+	// GO TO TOP OF PAGE BTN
+
+	// $('#goTop').click( function() {
+	// 	$("body,html").animate( { scrollTop: 0 }, 700, 'linear');
+	// });
 
 });
 	

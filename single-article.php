@@ -47,8 +47,8 @@
 			</div>
 
 			<div class="article-footer">
-				<div class="go-back">go back home</div>
-				<div class="go-top">top of page</div>
+				<div class="go-back"><a href="<?php echo get_option('home'); ?>/">go back home</a></div>
+				<!-- <div class="go-top" id="goTop">top of page</div> -->
 			</div>
 
 		</section>

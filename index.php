@@ -25,10 +25,10 @@
 
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
-			<a href="#" data-selector="li1">Watch Pilot</a>
-			<a href="#" data-selector="li2">Behind the Scenes</a>
-			<a href="#" data-selector="li3">Cast &amp; Crew</a>
-			<a href="#" data-selector="li4">Gallery</a>
+			<div class="menu-item" data-selector="li1">Watch Pilot</div>
+			<div class="menu-item" data-selector="li2">Behind the Scenes</div>
+			<div class="menu-item" data-selector="li3">Cast &amp; Crew</div>
+			<div class="menu-item" data-selector="li4">Gallery</div>
 			<div class="donate">
 				<p>!important: This donation does not currently go to Austin Wannabes!! Dont Use</br>--------------------------------</p>
 				<script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=texaswildricefestival@gmail.com"
@@ -46,17 +46,25 @@
 			<div class="social-media">
 				<ul>
 					<li>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook.svg")>
+						<a href="https://www.facebook.com/AustinWannabesOriginalSeries">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook.svg")>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/twitter.svg")>
+						<a href="https://twitter.com/austinwannabes">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/twitter.svg")>
+						</a>
+					</li>
+					<!-- <li>
+						<a href="">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/instagram.svg")>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/instagram.svg")>
-					</li>
-					<li>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/youtube.svg")>
-					</li>
+						<a href="">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/youtube.svg")>
+						</a>
+					</li> -->
 				</ul>
 			</div>
 			<button id="showLeftPush" data-selector="menuToggle"> 
